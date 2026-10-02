@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="武若楠的个人网站 — 从园艺到信息技术，从南京到布里斯班的人生旅程。">
+  <title>武若楠 · Noora Wu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1790932481">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo">Noora Journal</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="#about">关于我</a>
+        <a href="journey.html">成长旅程</a>
+        <a href="projects.html">项目作品</a>
+        <a href="journal.html">澳洲手札</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首页 Hero -->
+  <section class="hero">
+    <!-- 背景视频：本地风景片（Mixkit），不依赖 YouTube 嵌入 -->
+        <div class="hero-video" aria-hidden="true">
+      <video autoplay muted loop playsinline poster="images/hero.jpg">
+        <source src="images/hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="hero-rule" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1>Noora Wu</h1>
+        <blockquote class="hero-quote">
+          <p>We are all visitors to this time, this place.</p>
+          <p>We are just passing through.</p>
+          <p>Our purpose here is to observe, to learn, to grow, to love&hellip;</p>
+          <p>and then we return home.</p>
+        </blockquote>
+        <div class="hero-actions">
+          <a href="journey.html" class="btn btn-primary hero-btn hero-btn--primary">阅读我的故事<span class="hero-btn__arrow" aria-hidden="true">&rarr;</span></a>
+          <a href="#contact" class="btn btn-outline hero-btn hero-btn--ghost">联系我</a>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <p class="hero-credit">
+          Video from <a href="https://mixkit.co/free-stock-video/waterfall-in-forest-2213/" target="_blank" rel="noopener">Mixkit</a>
+        </p>
+      </div>
+    </div>
+
+    <a class="hero-scroll" href="#about" aria-label="向下浏览">
+      <span class="hero-scroll__line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- 关于我：编辑式不对称排版 + 拍立得照片 + 逐段浮现 -->
+  <section class="section about" id="about">
+    <div class="about-bg" aria-hidden="true">
+      <span class="about-blob about-blob--a"></span>
+      <span class="about-blob about-blob--b"></span>
+    </div>
+
+    <div class="container about-layout">
+      <div class="about-photo" data-tilt data-reveal style="--d:0">
+        <figure class="about-polaroid">
+          <!-- 主照片：替换 images/about-main.jpg（建议竖图 4:5） -->
+          <img src="images/about-main.jpg" alt="Noora 的照片" width="900" height="1125">
+        </figure>
+        <div class="about-badge" aria-hidden="true">
+          <svg class="about-badge__ring" viewBox="0 0 120 120">
+            <defs><path id="aboutBadgePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+            <text><textPath href="#aboutBadgePath" textLength="286" lengthAdjust="spacing">I'M CURIOUS · I LEARN FAST · I'M CURIOUS · I LEARN FAST · </textPath></text>
+          </svg>
+          <span class="about-badge__core">N</span>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <header class="about-heading">
+          <span class="section-label" data-reveal style="--d:1">About Me</span>
+          <h2 class="about-title" data-reveal style="--d:2">你好，我是 <span class="about-title__name">Noora</span>。</h2>
+          <p class="about-tagline" data-reveal style="--d:3">I'm curious, I learn fast, and I like <span class="about-tagline__mark">turning ideas into something real</span>.</p>
+          <p class="about-meta" data-reveal style="--d:4">现居澳大利亚布里斯班 · 昆士兰大学 Master of IT</p>
+        </header>
+        <div class="about-body">
+          <p class="about-lead" data-reveal style="--d:5">我是一个 INTJ。走进新环境时，我习惯先安静地观察，一旦认定一件事，我会认真的投入进去。</p>
+          <p data-reveal style="--d:6">我最开心的时刻，是把一个原本不会的东西，慢慢变成自己会的东西。然后在某个瞬间突然发现：「诶？原来我真的可以做到。」</p>
+          <p data-reveal style="--d:7">我走过的路看起来有点散，从农业、商业到新媒体，再到编程和 AI。但其中一直有一条线：我喜欢解决真实世界的问题，也愿意为此学习新的工具。</p>
+        </div>
+        <ul class="about-keywords">
+          <li class="about-keyword" data-reveal style="--d:8">
+            <span class="about-keyword__index" aria-hidden="true">01</span>
+            <h3>安静，但行动派</h3>
+            <p>不纠结、不犹豫、不拖延，去做就好。</p>
+          </li>
+          <li class="about-keyword" data-reveal style="--d:9">
+            <span class="about-keyword__index" aria-hidden="true">02</span>
+            <h3>问到底</h3>
+            <p>不只要答案，还要搞懂它为什么这样运行。</p>
+          </li>
+          <li class="about-keyword" data-reveal style="--d:10">
+            <span class="about-keyword__index" aria-hidden="true">03</span>
+            <h3>跨界连接者</h3>
+            <p>把不同的领域串联起来。</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 关键词跑马灯：词都取自上面的文字，纯装饰 -->
+    <div class="about-ticker" aria-hidden="true">
+      <div class="about-ticker__track">
+        <ul class="about-ticker__list">
+          <li>INTJ</li><li>Curious</li><li>Learn fast</li><li>安静，但行动派</li><li>问到底</li><li>跨界连接者</li>
+          <li>农业</li><li>商业</li><li>新媒体</li><li>编程</li><li>AI</li><li>Brisbane</li><li>Master of IT</li>
+        </ul>
+        <ul class="about-ticker__list">
+          <li>INTJ</li><li>Curious</li><li>Learn fast</li><li>安静，但行动派</li><li>问到底</li><li>跨界连接者</li>
+          <li>农业</li><li>商业</li><li>新媒体</li><li>编程</li><li>AI</li><li>Brisbane</li><li>Master of IT</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 探索更多：深色 bento，三张入口卡，悬停时光晕跟随指针 -->
+  <section class="section explore" id="explore">
+    <div class="explore-bg" aria-hidden="true"></div>
+    <div class="container">
+      <header class="explore-header" data-reveal>
+        <span class="section-label">探索更多</span>
+        <h2>继续了解我</h2>
+      </header>
+
+      <div class="explore-grid">
+        <a href="journey.html" class="explore-card explore-card--journey" data-reveal data-glow style="--d:1">
+          <span class="explore-card__glow" aria-hidden="true"></span>
+          <span class="explore-card__index" aria-hidden="true">01</span>
+          <h3 class="explore-card__title">成长旅程</h3>
+          <p class="explore-card__desc">从海南园艺到深圳供应链，再到布里斯班信息技术。</p>
+          <ol class="explore-route" aria-hidden="true">
+            <li><span class="explore-route__dot"></span><b>海南</b><small>园艺</small></li>
+            <li><span class="explore-route__dot"></span><b>深圳</b><small>供应链</small></li>
+            <li><span class="explore-route__dot"></span><b>布里斯班</b><small>信息技术</small></li>
+          </ol>
+          <span class="explore-card__link">查看旅程<span class="explore-card__arrow" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="projects.html" class="explore-card explore-card--projects" data-reveal data-glow style="--d:2">
+          <span class="explore-card__glow" aria-hidden="true"></span>
+          <span class="explore-card__index" aria-hidden="true">02</span>
+          <h3 class="explore-card__title">项目作品</h3>
+          <p class="explore-card__desc">上海文化遗产网站、Brisbin App 原型等学习与创作，以及技能与工具。</p>
+          <ul class="explore-chips" aria-hidden="true">
+<li>网页开发<span>5</span></li><li>设计<span>2</span></li><li>视频与新媒体<span>4</span></li><li>AI 与研究<span>2</span></li>          </ul>
+          <span class="explore-card__link">查看作品<span class="explore-card__arrow" aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="journal.html" class="explore-card explore-card--journal" data-reveal data-glow style="--d:3">
+          <span class="explore-card__glow" aria-hidden="true"></span>
+          <span class="explore-card__index" aria-hidden="true">03</span>
+          <h3 class="explore-card__title">澳洲手札</h3>
+          <p class="explore-card__desc">写在南半球的日子：留学、生活、转行与自我怀疑。</p>
+          <p class="explore-latest"><span class="explore-latest__label">最新</span><span class="explore-latest__title">DECO7250：人机交互</span></p>
+          <span class="explore-card__link">阅读手札<span class="explore-card__arrow" aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="footer-name">Noora Wu</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="#top">首页</a></li>
+            <li><a href="journey.html">成长旅程</a></li>
+            <li><a href="projects.html">项目作品</a></li>
+            <li><a href="journal.html">澳洲手札</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:noora_wu@outlook.com" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>noora_wu@outlook.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Noora Wu<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">Built with care in Brisbane 🌅</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

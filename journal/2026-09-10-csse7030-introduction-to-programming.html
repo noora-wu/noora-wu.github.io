@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="记录 CSSE7030 Introduction to Programming：Python 入门、个人作业、期末手写代码，以及没有编程背景的人如何熬过这门课。">
+  <title>CSSE7030：我在 UQ 的第一场编程大魔王 · 澳洲手札</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=1790932481">
+</head>
+<body>
+
+  <header class="site-header is-solid" id="top">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">Noora Journal</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="../index.html#about">关于我</a>
+        <a href="../journey.html">成长旅程</a>
+        <a href="../projects.html">项目作品</a>
+        <a href="../journal.html" aria-current="page">澳洲手札</a>
+      </nav>
+    </div>
+  </header>
+  <article class="post-page">
+    <div class="post-container">
+
+      <a href="../journal.html" class="back-link">← 返回澳洲手札</a>
+
+      <header class="post-header">
+        <div class="post-header__meta">
+          <span class="post-header__cat">学业</span>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+          <span class="post-header__read">约 8 分钟</span>
+        </div>
+        <h1>CSSE7030：我在 UQ 的第一场编程大魔王</h1>
+        <p class="post-header__lead">
+          来 UQ 读 IT 之前，我写过报告、做过项目、管过供应链，但从来没有真正写过程序。
+          CSSE7030 是我的第一门编程课，也是整个学期里我投入最多心力的一门。
+          很多人说它是入门课——对有背景的人或许是，对我来说，它是大魔王。
+        </p>
+        <div class="post-header__tags">
+          <span>CSSE7030</span><span>Python</span><span>学业</span>
+        </div>
+      </header>
+
+      <aside class="grade-card" aria-label="课程成绩">
+        <div class="grade-card__main">
+          <div class="grade-card__score">
+            <span class="grade-card__final">7.0</span>
+            <span class="grade-card__scale">/ 7</span>
+          </div>
+          <div class="grade-card__summary">
+            <p class="grade-card__label">High Distinction</p>
+            <p class="grade-card__course">
+CSSE7030<span>· 2025 S1</span><span>· 总分 94 / 100</span>            </p>
+          </div>
+        </div>
+        <dl class="grade-card__items">
+          <div class="grade-card__item">
+            <dt>Assignment 1</dt>
+            <dd>10 / 10</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>Assignment 2</dt>
+            <dd>98 / 100</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>期中 · 笔试</dt>
+            <dd>14 / 15</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>期中 · 选择</dt>
+            <dd>6 / 10</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>期末 · 选择</dt>
+            <dd>28 / 30</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>期末 · 笔试</dt>
+            <dd>9 / 10</dd>
+          </div>
+          <div class="grade-card__item">
+            <dt>RiPPLE</dt>
+            <dd>10 / 10</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <div class="post-body">
+
+        <h2>一门「听起来不吓人」的课</h2>
+        <p>
+          CSSE7030 教的是编程基础：用 Python 学习变量、循环、函数、面向对象，
+          学会把问题拆成算法，再写成能跑的程序。
+        </p>
+        <p>
+          Python 被选作入门语言是有道理的。语法相对干净，读起来接近自然语言，
+          适合把注意力放在「怎么思考」而不是「怎么记奇怪的符号」上。
+          更重要的是，这里练的是通用的程序设计思维：抽象、拆解、调试。
+          以后换 Java、换别的语言，换的主要是语法，逻辑底座是通的。
+        </p>
+        <p>
+          我上课那学期，主讲是来自加拿大的 Paul Vrbik 教授。他讲课有趣，节奏也清楚，
+          每周的内容都有清晰架构，课堂上还会时不时「不小心」点出哪些观念可能出现在期末考里——
+          认真听讲的人，备考会踏实很多。
+        </p>
+
+        <h2>真正难的，不是听懂，是做出来</h2>
+        <p>
+          课听起来不算难。Lecture 上点点头，Tutorial 里跟着助教做几道练习，
+          Practical 举手问两个问题——这一套流程我很快就熟悉了。
+          可一到作业，整个人就被按在地上摩擦。
+        </p>
+        <p>
+          这门课的作业几乎全是个人项目。每次一发下来，先是一份很长的 PDF：
+          规格、步骤、边界情况、评分标准，密密麻麻。你要先读懂它想让你做什么，
+          再一点点把程序搭起来。课程会提前发布作业，还有 Help Center——
+          助教不会直接给你答案，但会推着你想下一步。
+        </p>
+        <p>
+          我那学期有两份大作业，难度是递进的。
+        </p>
+        <p>
+          Assignment 1 是做一个终端版的 Mastermind（密码破译）。
+          生成棋盘、接收猜测、用黑白反馈标记对错位置、处理提示和非法输入——
+          听起来像童年桌游，写起来却要和字符串、列表、循环、条件判断反复较劲。
+          那是我第一次完整地把「规则」翻译成能跑的程序，也第一次体会到：
+          「规则简单」和「实现干净」之间，隔着一整片沼泽。
+        </p>
+
+        <!-- 可玩版：规则对齐作业；点开就能试 -->
+        <div class="mm-play" data-mastermind>
+          <div class="mm-play__chrome">
+            <span class="mm-play__title">试玩 · Mastermind（网页版）</span>
+            <div class="mm-play__actions">
+              <button type="button" class="mm-btn" data-mm-help>说明</button>
+              <button type="button" class="mm-btn" data-mm-hint>提示</button>
+              <button type="button" class="mm-btn" data-mm-restart>再来一局</button>
+            </div>
+          </div>
+          <div class="mm-play__body">
+            <div class="mm-play__meta">
+              <div class="mm-key"><strong>Key</strong> <span data-mm-key></span></div>
+              <span data-mm-meta></span>
+            </div>
+            <div class="mm-board" data-mm-board aria-live="polite"></div>
+            <p class="mm-msg" data-mm-msg></p>
+            <form class="mm-form" data-mm-form>
+              <input
+                type="text"
+                data-mm-input
+                placeholder="例如 1,2,3,4,5 或 12345"
+                autocomplete="off"
+                inputmode="numeric"
+                aria-label="输入你的猜测">
+              <button type="submit" class="mm-btn mm-btn--primary" data-mm-submit>提交猜测</button>
+            </form>
+            <p class="mm-play__hint">B = 位置正确，W = 数字正确但位置不对。猜满 3 次后可使用提示。</p>
+          </div>
+        </div>
+
+        <p>
+          Assignment 2 叫 BreachWay，是一艘飞船卡牌对战游戏，也是我真正被按在地上摩擦的那一次。
+          要写 Card、牌组、HardPoint、Ship、Player、Enemy，再把它们接到游戏模型和控制器上；
+          还要从关卡文件里读状态，处理存档读档，处理损坏、能量、护盾这些规则。
+          程序开始有了「世界」的感觉，也开始有了「改一处坏三处」的噩梦。
+          我的提交文件最后写到一千多行——对零基础的我来说，那已经像在盖一座自己暂时看不全的楼。
+        </p>
+        <p>
+          每一份作业，老实算下来至少要一到两周。不是每天写一点那么浪漫——
+          常常是连续几天坐在屏幕前，对着报错信息发呆，改一行，跑一遍，再报错。
+        </p>
+
+        <blockquote>
+          <p>内容听懂了，不代表你会做。作业才是这门课真正的考场。</p>
+        </blockquote>
+
+        <h2>期末：纸上写代码</h2>
+        <p>
+          期末是线下闭卷考试，而且要手写代码。要自己在脑海中跑代码，错了还得自己在纸上找回来。
+        </p>
+
+        <h2>我带走了什么</h2>
+        <p>
+          成绩单上的数字会过期，但这门课留给我的东西没有。
+          我学会了把一个大问题拆成小步骤；学会了读别人的代码；
+          学会了测试和调试不再靠运气；也第一次认真体会到——
+          不会，是学习的起点，不是终点的判决。
+        </p>
+        <p>
+          如果现在有人问我要不要第一学期就修它，我会说：赶早。
+          后面的编程课、小组项目、自己想做的小工具，都会用到这里打下的底座。
+          Python 语法以后可以忘一些，但「怎么把想法变成能运行的步骤」这件事，会一直跟着你。
+        </p>
+        <p>
+          回头看，CSSE7030 确实是我在 UQ 遇到的第一场大魔王。
+          它没有让我立刻变成厉害的程序员，但它让我确认了一件事：
+          我可以在完全不会的领域里，靠一页页读、一行行改、一个个夜熬过去——然后交上去。
+        </p>
+        <p>
+          对转行来读 IT 的人来说，这就够当一块垫脚石了。
+        </p>
+
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-footer__sign">
+          <p>Noora · 写于布里斯班</p>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+        </div>
+        <nav class="post-nav" aria-label="文章导航">
+          <a href="2026-09-10-csse7023-object-oriented-programming.html" class="post-nav__item post-nav__item--prev">
+            <span class="post-nav__label">上一篇</span>
+            <span class="post-nav__title">CSSE7023：面向对象编程</span>
+          </a>
+          <a href="2026-09-10-deco7140-introduction-to-web-design.html" class="post-nav__item post-nav__item--next">
+            <span class="post-nav__label">下一篇</span>
+            <span class="post-nav__title">DECO7140：从零开始写网站</span>
+          </a>
+        </nav>
+      </footer>
+
+    </div>
+  </article>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-name">Noora Wu</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../journey.html">成长旅程</a></li>
+            <li><a href="../projects.html">项目作品</a></li>
+            <li><a href="../journal.html" aria-current="page">澳洲手札</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:noora_wu@outlook.com" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>noora_wu@outlook.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Noora Wu<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">Built with care in Brisbane 🌅</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

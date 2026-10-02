@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="澳洲手札 —— 武若楠在布里斯班的留学、生活与转行记录。">
+  <title>澳洲手札 · Noora Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1790932481">
+</head>
+<body>
+
+  <header class="site-header is-solid" id="top">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Noora Journal</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html#about">关于我</a>
+        <a href="journey.html">成长旅程</a>
+        <a href="projects.html">项目作品</a>
+        <a href="journal.html" aria-current="page">澳洲手札</a>
+      </nav>
+    </div>
+  </header>
+  <!-- 页头横幅 -->
+  <section class="page-hero">
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__rule" aria-hidden="true"></div>
+      <div class="page-hero__text">
+        <span class="page-hero__label">澳洲手札</span>
+        <h1>写在南半球的日子</h1>
+        <p class="page-hero__desc">
+          留学、生活、转行与自我怀疑——不定期更新，像一本摊开的日记。
+        </p>
+      </div>
+      <dl class="page-hero__stats">
+        <div>
+          <dt>已发布</dt>
+          <dd data-stat="published">7</dd>
+        </div>
+        <div>
+          <dt>草稿中</dt>
+          <dd data-stat="draft">3</dd>
+        </div>
+        <div>
+          <dt>最近更新</dt>
+          <dd>2026.09.10</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <main class="journal-layout container">
+
+    <div class="journal-main">
+      <!-- 分类筛选：data-filter 与文章的 data-category 对应 -->
+      <div class="filter-bar" role="group" aria-label="按分类筛选">
+        <button class="filter-chip is-active" data-filter="all">全部</button>
+        <button class="filter-chip" data-filter="study">学业</button>
+        <button class="filter-chip" data-filter="life">生活</button>
+        <button class="filter-chip" data-filter="career">求职</button>
+        <button class="filter-chip" data-filter="thoughts">随想</button>
+      </div>
+
+      <p class="filter-empty" hidden>这个分类还没有文章。</p>
+
+      <ol class="post-list">
+        <article class="post-item post-item--pinned" data-category="thoughts">
+          <div class="post-item__meta">
+            <span class="post-item__pin">置顶</span>
+            <time datetime="2026-09-09">2026.09.09</time>
+            <span class="post-item__cat">随想</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-09-meaning-of-studying-abroad.html">你问我留学的意义，答案它就在那里</a>
+            </h2>
+            <p class="post-item__excerpt">
+              它从来不是那张烫金的毕业证，而是一场暴力的、连根拔起的自我摧毁与重建。关于被打碎的标准答案、深夜里的崩溃，以及一个更完整的自己。
+            </p>
+            <div class="post-item__tags">
+              <span>留学</span><span>转行</span><span>自我</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="study">
+          <div class="post-item__meta">
+            <time datetime="2026-09-10">2026.09.10</time>
+            <span class="post-item__cat">学业</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-10-deco7250-human-computer-interaction.html">DECO7250：人机交互</a>
+            </h2>
+            <p class="post-item__excerpt">
+              HCI 入门课：用户研究、人因理论、界面评估，再到团队设计提案。我做了布里斯班智能垃圾分类 App 原型 Brisbin，总评 6.0。
+            </p>
+            <div class="post-item__tags">
+              <span class="post-item__grade">成绩 6.0</span>
+              <span>DECO7250</span><span>HCI</span><span>UX</span><span>Figma</span><span>学业</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="study">
+          <div class="post-item__meta">
+            <time datetime="2026-09-10">2026.09.10</time>
+            <span class="post-item__cat">学业</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-10-deco7220-information-visualisation.html">DECO7220：信息可视化</a>
+            </h2>
+            <p class="post-item__excerpt">
+              DECO7220 Information Visualisation：三轮图表重设计与互评、一张用 Illustrator 排版的 A2 数据海报，再把海报里的一张图做成可交互的探索页面。我的主题是美国的性别薪酬差距。
+            </p>
+            <div class="post-item__tags">
+              <span class="post-item__grade">成绩 6.0</span>
+              <span>DECO7220</span><span>数据可视化</span><span>Illustrator</span><span>信息设计</span><span>学业</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="study">
+          <div class="post-item__meta">
+            <time datetime="2026-09-10">2026.09.10</time>
+            <span class="post-item__cat">学业</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-10-deco7140-introduction-to-web-design.html">DECO7140：从零开始写网站</a>
+            </h2>
+            <p class="post-item__excerpt">
+              Peter Worthy 的课作业多、要求细，但把 UI/UX、前端和 WCAG 无障碍拧成一条线。我的期末作品是上海文化遗产网站，A3、A4 都拿了 7。
+            </p>
+            <div class="post-item__tags">
+              <span class="post-item__grade">成绩 6.0</span>
+              <span>DECO7140</span><span>Web</span><span>WCAG</span><span>学业</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="study">
+          <div class="post-item__meta">
+            <time datetime="2026-09-10">2026.09.10</time>
+            <span class="post-item__cat">学业</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-10-csse7030-introduction-to-programming.html">CSSE7030：编程入门</a>
+            </h2>
+            <p class="post-item__excerpt">
+              没有编程背景的我，第一次作业就拿到二十多页 PDF。这门课教会我的，不只是 Python，还有怎么在不会的时候继续往前走。
+            </p>
+            <div class="post-item__tags">
+              <span class="post-item__grade">成绩 7.0</span>
+              <span>CSSE7030</span><span>Python</span><span>学业</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="study">
+          <div class="post-item__meta">
+            <time datetime="2026-09-10">2026.09.10</time>
+            <span class="post-item__cat">学业</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-10-csse7023-object-oriented-programming.html">CSSE7023：面向对象编程</a>
+            </h2>
+            <p class="post-item__excerpt">
+              CSSE7023 Object Oriented Programming 是我学 Java 的那门课：类与对象、封装、继承、接口，再到泛型、异常处理、文件读写和 GUI。总评 6.0。
+            </p>
+            <div class="post-item__tags">
+              <span class="post-item__grade">成绩 6.0</span>
+              <span>CSSE7023</span><span>Java</span><span>OOP</span><span>学业</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item" data-category="thoughts">
+          <div class="post-item__meta">
+            <time datetime="2026-09-09">2026.09.09</time>
+            <span class="post-item__cat">随想</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">
+              <a href="journal/2026-09-09-the-road-not-taken.html">少有人走的路</a>
+            </h2>
+            <p class="post-item__excerpt">
+              我们习惯把人多的那条路叫做安全，可它安全只是因为人多。
+            </p>
+            <div class="post-item__tags">
+              <span>选择</span><span>勇气</span><span>人生</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item post-item--draft" data-category="life">
+          <div class="post-item__meta">
+            <time>待发布</time>
+            <span class="post-item__cat">生活</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">初来布里斯班：适应与发现</h2>
+            <p class="post-item__excerpt">
+              这座城市的天空、市集、咖啡馆，以及作为一个国际学生的日常观察……
+            </p>
+            <div class="post-item__tags">
+              <span>布里斯班</span><span>初印象</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item post-item--draft" data-category="career">
+          <div class="post-item__meta">
+            <time>待发布</time>
+            <span class="post-item__cat">求职</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">国际学生求职实录</h2>
+            <p class="post-item__excerpt">
+              非 PR 身份、本地经验、简历优化、面试与 Networking 的真实体会……
+            </p>
+            <div class="post-item__tags">
+              <span>求职</span><span>签证</span>
+            </div>
+          </div>
+        </article>
+        <article class="post-item post-item--draft" data-category="career">
+          <div class="post-item__meta">
+            <time>待发布</time>
+            <span class="post-item__cat">求职</span>
+          </div>
+          <div class="post-item__body">
+            <h2 class="post-item__title">从农业到 IT：我为什么要重新出发</h2>
+            <p class="post-item__excerpt">
+              六年职场沉淀之后，我选择来到澳洲读研的心路历程……
+            </p>
+            <div class="post-item__tags">
+              <span>转行</span><span>自述</span>
+            </div>
+          </div>
+        </article>
+      </ol>
+
+      <!-- 文章多了之后再启用；现在只是占位 -->
+      <nav class="pagination" aria-label="分页" hidden>
+        <a href="#" class="pagination__prev">← 上一页</a>
+        <span class="pagination__info">第 1 / 1 页</span>
+        <a href="#" class="pagination__next">下一页 →</a>
+      </nav>
+    </div>
+
+    <aside class="journal-sidebar">
+      <div class="sidebar-card">
+        <h2>关于这个专栏</h2>
+        <p>
+          2025 年我从南京来到布里斯班读 IT 硕士。这里记录一些碎碎念、思考，以及一些生活和学习的经验分享。
+        </p>
+        <a href="index.html#about" class="read-more">认识我 →</a>
+      </div>
+    </aside>
+
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-name">Noora Wu</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="journey.html">成长旅程</a></li>
+            <li><a href="projects.html">项目作品</a></li>
+            <li><a href="journal.html" aria-current="page">澳洲手札</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:noora_wu@outlook.com" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>noora_wu@outlook.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Noora Wu<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">Built with care in Brisbane 🌅</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

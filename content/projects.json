@@ -1,0 +1,247 @@
+{
+  "_说明": [
+    "【怎么新增一个项目】在下面 projects 列表里复制一段 { ... }，改成新项目的内容，保存即可（--watch 会自动重新生成，或运行 python build.py）。",
+    "必填：title（标题）、category（分类 key，必须是 categories 里的某个 key）。",
+    "选填：summary（一句话简介）、tags（标签列表）、link（项目链接）、link_label（按钮文字，默认「查看项目」）、image（封面图路径，如 images/xxx.jpg，建议 16:9；不填会显示渐变占位）、thumb_text（无封面时占位上显示的短字，默认标题首字母）、year（年份）、status（状态，如「进行中」）。",
+    "列表里的顺序就是页面上的显示顺序；每段之间要有英文逗号，最后一段后面不要逗号。",
+    "想新增分类：在 categories 里加一行 {\"key\": \"英文key\", \"label\": \"中文名\"}，页面会自动多出一个标签。没有项目的分类会显示「整理中，敬请期待」。",
+    "repo：可选，GitHub 仓库地址，会多出一个「GitHub」按钮。",
+    "links：可选，多个按钮，格式 [{\"label\": \"按钮文字\", \"url\": \"链接\"}]，会排在 link / repo 按钮后面。"
+  ],
+  "categories": [
+    {
+      "key": "web",
+      "label": "网页开发"
+    },
+    {
+      "key": "design",
+      "label": "设计"
+    },
+    {
+      "key": "media",
+      "label": "视频与新媒体"
+    },
+    {
+      "key": "research",
+      "label": "AI 与研究"
+    }
+  ],
+  "projects": [
+    {
+      "title": "TEDxUQ Website",
+      "category": "web",
+      "summary": "为 TEDxUQ 制作的网站，包含活动、演讲者申请、合作伙伴、加入团队和新闻文章等板块。",
+      "tags": [
+        "HTML",
+        "CSS",
+        "GitHub Pages",
+        "TEDxUQ"
+      ],
+      "link": "https://noora-wu.github.io/TEDxUQweb/",
+      "link_label": "查看网站",
+      "repo": "https://github.com/noora-wu/TEDxUQweb",
+      "image": "images/tedxuq.png"
+    },
+    {
+      "title": "UQ Waves",
+      "category": "web",
+      "summary": "为 UQ 学生设计的移动端校园社区应用：浏览和搜索讨论帖、给课程和老师打分、管理个人资料，并支持浅色和深色模式。",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "Zustand"
+      ],
+      "image": "images/uq-waves.jpg",
+      "repo": "https://github.com/noora-wu/uq-waves"
+    },
+    {
+      "title": "Shanghai Cultural Heritage",
+      "category": "web",
+      "summary": "上海文化遗产信息展示网站",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "WCAG"
+      ],
+      "link": "https://noora-wu.github.io/Shanghai-Cultural-Heritage/",
+      "link_label": "查看项目",
+      "image": "images/shanghai.png"
+    },
+    {
+      "title": "Occupation Gender Pay Gap Explorer",
+      "category": "web",
+      "summary": "DECO7220 课程作品：用交互式气泡图探索美国各职业的性别薪酬差距（1981–2013，Current Population Survey 数据）。可拖动年份滑杆或播放动画看差距随时间变化，按差距最大 / 最接近平等筛选，搜索职业，平移缩放，悬停查看工资与人数，点击锁定并追踪某个职业。",
+      "tags": [
+        "D3.js",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "数据可视化"
+      ],
+      "link": "https://noora-wu.github.io/occupation-paygap-explorer/",
+      "link_label": "查看网站",
+      "repo": "https://github.com/noora-wu/occupation-paygap-explorer",
+      "year": "2026",
+      "image": "images/occupation-paygap-explorer.jpg"
+    },
+    {
+      "title": "UQ Event Hub",
+      "category": "web",
+      "summary": "UQ 校园活动平台：按校区、类别和日期搜索讲座、社交和体育活动，支持报名、主办方后台和 AI 推荐。原版用 Django + MySQL 部署在 UQ 服务器上，这里是公开页面的静态预览。",
+      "tags": [
+        "Django",
+        "Python",
+        "Bootstrap",
+        "htmx",
+        "MySQL"
+      ],
+      "image": "images/uqeventhub.jpg",
+      "link": "https://noora-wu.github.io/uqeventhub/",
+      "link_label": "查看网站",
+      "repo": "https://github.com/noora-wu/uqeventhub"
+    },
+    {
+      "title": "Brisbin",
+      "category": "design",
+      "summary": "面向布里斯班生活场景的智能垃圾分类 App 原型，含用户需求分析、交互流程与界面设计。",
+      "tags": [
+        "Figma",
+        "UI/UX",
+        "Mobile"
+      ],
+      "link": "https://www.figma.com/design/EGY7oRB7pPOzikyaOA77qp/Brisbin---smart-waste-management-app?node-id=483-47&p=f",
+      "link_label": "在 Figma 打开",
+      "thumb_text": "UX",
+      "image": "images/brisbin.png"
+    },
+    {
+      "title": "The Gender Pay Gap in the United States",
+      "category": "design",
+      "summary": "DECO7220 课程作品：A2 横版数据可视化海报，用 Kaggle 的美国性别薪酬差距数据（1981–2013），讲述薪酬差距的整体情况、历史变化、地区差异和职业分布。",
+      "tags": [
+        "Adobe Illustrator",
+        "数据可视化",
+        "海报设计",
+        "A2"
+      ],
+      "image": "images/deco7220/gender-pay-gap-poster-thumb.jpg",
+      "link": "projects/deco7220-poster/index.html",
+      "link_label": "查看海报",
+      "year": "2026"
+    },
+    {
+      "title": "Grief VR Tool",
+      "category": "research",
+      "summary": "REIT7841 课程研究项目——虚拟现实中的情感支持工具。",
+      "tags": [
+        "Unity",
+        "HCI",
+        "Research"
+      ],
+      "thumb_text": "R&D",
+      "status": "进行中",
+      "image": "images/vr.png",
+      "link": "https://github.com/noora-wu/2026S2_VRProject",
+      "link_label": "GitHub 仓库"
+    },
+    {
+      "title": "Automated Acquisition of Fruit Tree Growth Data",
+      "category": "research",
+      "summary": "暑期研究项目：开发一套自动化监测系统，在田间持续采集果树的图像与环境数据，为果树生长分析和建模提供高频、一致的数据。",
+      "tags": [
+        "Summer Research",
+        "Agriculture",
+        "Image Data"
+      ],
+      "link": "https://github.com/noora-wu/2026_Summer_Research",
+      "link_label": "GitHub 仓库",
+      "year": "2026",
+      "image": "images/2026summer research.png"
+    },
+    {
+      "title": "金色庄园新媒体矩阵",
+      "category": "media",
+      "summary": "南京金色庄园农产品有限公司新媒体运营：公司公众号，以及草莓品牌「莓小兔」的视频号、抖音和小红书（2130 次赞与收藏）。",
+      "tags": [
+        "微信公众号",
+        "视频号",
+        "抖音",
+        "小红书",
+        "农产品品牌"
+      ],
+      "image": "images/media/goldenmanor-meixiaotu.jpg",
+      "year": "2023–2025",
+      "links": [
+        {
+          "label": "公众号推文",
+          "url": "https://mp.weixin.qq.com/s/pSAi5Qj3KbvliHwt8VvMtA"
+        },
+        {
+          "label": "视频号作品",
+          "url": "https://weixin.qq.com/sph/AcHIw58LTP"
+        },
+        {
+          "label": "抖音主页",
+          "url": "https://v.douyin.com/p_F-M1et0Cs/"
+        },
+        {
+          "label": "小红书主页",
+          "url": "https://xhslink.cn/o/3O9J4f8K4Vs"
+        }
+      ]
+    },
+    {
+      "title": "UQCSSA 微信公众号",
+      "category": "media",
+      "summary": "2026 年 7 月起任 UQCSSA 社媒部部长，参与公众号内容。代表推文：《活动回顾｜UQCSSA周末一日游计划：卡拜伦湾 & 图文巴鲜花节》。",
+      "tags": [
+        "微信公众号",
+        "UQCSSA",
+        "社媒部"
+      ],
+      "link": "https://mp.weixin.qq.com/s?__biz=MzA3NzMyMTUxOA==&mid=2651637770&idx=1&sn=956fad0059329bcc79aa854ef7c6fb29&chksm=85f17b4d4627857329aa40d362605b807845eb47f1c1c26631e1e66046f85700782f79f37567#rd",
+      "link_label": "公众号推文",
+      "image": "images/media/uqcssa-event.jpg",
+      "year": "2026"
+    },
+    {
+      "title": "TEDxUQ Instagram",
+      "category": "media",
+      "summary": "2026 年 3 月加入 TEDxUQ 市场团队，参与 TEDxUQ Instagram 账号 @tedxuq 的内容工作。",
+      "tags": [
+        "Instagram",
+        "TEDxUQ",
+        "Marketing"
+      ],
+      "link": "https://www.instagram.com/tedxuq/",
+      "link_label": "Instagram 主页",
+      "year": "2026",
+      "image": "images/media/tedxuq-instagram.jpg"
+    },
+    {
+      "title": "UQ Union International 小红书",
+      "category": "media",
+      "summary": "2025 年 7 月加入 UQ Union 国际学生部，参与小红书「UQ Union International」的内容（833 次赞与收藏）；旧账号为「UQ学生会」。",
+      "tags": [
+        "小红书",
+        "UQ Union",
+        "国际学生"
+      ],
+      "year": "2025",
+      "links": [
+        {
+          "label": "小红书主页",
+          "url": "https://xhslink.cn/o/6T4vSER0tpD"
+        },
+        {
+          "label": "旧账号「UQ学生会」",
+          "url": "https://xhslink.cn/o/8gO9IMgzaAR"
+        }
+      ],
+      "image": "images/media/uqu-xiaohongshu.jpg"
+    }
+  ]
+}

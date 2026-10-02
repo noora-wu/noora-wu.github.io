@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description }}">
+  <title>{{ title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{{ site.fonts }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ base }}css/style.css?v={{ css_v }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  <header class="site-header{% if solid_header %} is-solid{% endif %}" id="top">
+    <div class="header-inner">
+      <a href="{{ home_href }}" class="logo">{{ site.logo }}</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        {% for item in nav %}
+        <a href="{{ item.href }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+{% block content %}{% endblock %}
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="{{ home_href }}" class="footer-name">{{ site.author }}</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="{{ home_href }}">首页</a></li>
+            {% for item in nav if '#' not in item.href %}
+            <li><a href="{{ item.href }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:{{ site.email }}" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>{{ site.email }}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© {{ site.year }} {{ site.author }}<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">{{ site.footer_note }}</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ base }}js/main.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

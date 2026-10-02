@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="记录 CSSE7023 Object Oriented Programming：用 Java 学习面向对象——类与对象、封装、继承、接口，以及泛型、异常处理、文件读写与 GUI。">
+  <title>CSSE7023：在 Java 里学面向对象 · 澳洲手札</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=1790932481">
+</head>
+<body>
+
+  <header class="site-header is-solid" id="top">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">Noora Journal</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="../index.html#about">关于我</a>
+        <a href="../journey.html">成长旅程</a>
+        <a href="../projects.html">项目作品</a>
+        <a href="../journal.html" aria-current="page">澳洲手札</a>
+      </nav>
+    </div>
+  </header>
+  <article class="post-page">
+    <div class="post-container">
+
+      <a href="../journal.html" class="back-link">← 返回澳洲手札</a>
+
+      <header class="post-header">
+        <div class="post-header__meta">
+          <span class="post-header__cat">学业</span>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+          <span class="post-header__read">约 7 分钟</span>
+        </div>
+        <h1>CSSE7023：在 Java 里学面向对象</h1>
+        <p class="post-header__lead">
+          如果说 CSSE7030 用 Python 带我入了门，这门课则换成了 Java，把面向对象放到了正中间。
+        </p>
+        <div class="post-header__tags">
+          <span>CSSE7023</span><span>Java</span><span>OOP</span><span>学业</span>
+        </div>
+      </header>
+
+      <aside class="grade-card" aria-label="课程成绩">
+        <div class="grade-card__main">
+          <div class="grade-card__score">
+            <span class="grade-card__final">6.0</span>
+            <span class="grade-card__scale">/ 7</span>
+          </div>
+          <div class="grade-card__summary">
+            <p class="grade-card__label">Distinction</p>
+            <p class="grade-card__course">
+CSSE7023<span>· 2025 S2</span><span>· 总评 6.0</span>            </p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="post-body">
+
+        <h2>一门以面向对象为主线的课</h2>
+        <p>
+          CSSE7023 的先修课是 CSSE7030。主要教授的是 Java 的文件读写和图形界面（GUI）上。
+          类与对象、封装、继承、接口，这几块面向对象的基石，是这门课绕不开的内容。
+        </p>
+        <p>
+          和 Python 相比，Java 更「较真」：类型要写明，类和接口之间的关系要先想清楚，
+          很多问题在程序跑起来之前，就会被编译器拦下来。
+        </p>
+
+        <h2>作业与考试</h2>
+        <p>
+          <strong>Assignment 1</strong> 是把一款 1971 年的老游戏搬进 Java：
+          Mike Mayfield 用 BASIC 写的文字版 Star Trek（STTR1）。原版是给电传打字机跑的过程式程序，
+          作业要求按照 Javadoc 规格，用面向对象的方式把它的核心重新写出来——
+          8×8 个象限组成的银河、跃迁、能量、克林贡战舰——听起来像科幻，写起来是一整套封装、模块化与继承的练习。
+        </p>
+        <p>
+          下面是 Assignment 1 的可玩版本：运行的就是我当时提交的 Java 程序，借助 CheerpJ 在浏览器里跑起来。
+          点「开始游戏」后，第一次要下载 Java 运行环境，需要等十几秒到半分钟；进入游戏后，在窗口底部输入指令、按回车即可。
+        </p>
+
+        <!-- 可玩版：CheerpJ 在浏览器里运行 Assignment 1 编译后的 jar（文件在 projects/csse7023-a1/） -->
+        <div class="mm-play java-play">
+          <div class="mm-play__chrome">
+            <span class="mm-play__title">试玩 · STTR1 Star Trek（Java 原程序）</span>
+            <div class="mm-play__actions">
+              <a class="mm-btn" href="../projects/csse7023-a1/index.html" target="_blank" rel="noopener">新窗口打开</a>
+            </div>
+          </div>
+          <iframe class="java-play__frame" src="../projects/csse7023-a1/index.html" title="CSSE7023 Assignment 1 · STTR1 Star Trek 试玩" loading="lazy"></iframe>
+          <p class="mm-play__hint">指令：0 移动 · 1 扫描当前象限 · 2 扫描附近象限 · 3 相位炮 · 4 鱼雷 · 5 护盾；输入其他内容会显示指令列表。</p>
+        </div>
+
+        <p>
+          <strong>Assignment 2</strong> 主要用 Java Swing 把 Assignment 1 改成 GUI 版，并按 MVC（Model-View-Controller）架构拆开：
+        </p>
+
+        <h2>我带走了什么</h2>
+        <p>
+          Java 成了我继 Python 之后学会的第二门编程语言。
+        </p>
+        <p>
+          把 CSSE7030 和 CSSE7023 放在一起看，是一条很自然的路线：
+          先用 Python 学会把问题拆成步骤，再用 Java 学会把程序组织成彼此协作的对象。
+        </p>
+
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-footer__sign">
+          <p>Noora · 写于布里斯班</p>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+        </div>
+        <nav class="post-nav" aria-label="文章导航">
+          <a href="2026-09-09-the-road-not-taken.html" class="post-nav__item post-nav__item--prev">
+            <span class="post-nav__label">上一篇</span>
+            <span class="post-nav__title">少有人走的路</span>
+          </a>
+          <a href="2026-09-10-csse7030-introduction-to-programming.html" class="post-nav__item post-nav__item--next">
+            <span class="post-nav__label">下一篇</span>
+            <span class="post-nav__title">CSSE7030：编程入门</span>
+          </a>
+        </nav>
+      </footer>
+
+    </div>
+  </article>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-name">Noora Wu</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../journey.html">成长旅程</a></li>
+            <li><a href="../projects.html">项目作品</a></li>
+            <li><a href="../journal.html" aria-current="page">澳洲手札</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:noora_wu@outlook.com" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>noora_wu@outlook.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Noora Wu<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">Built with care in Brisbane 🌅</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

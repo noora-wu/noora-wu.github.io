@@ -1,0 +1,11 @@
+# 私人信息，不上传
+内容.md
+
+# 临时文件
+_e.py
+__pycache__/
+_backup_*/
+_screenshots/
+.vscode/
+.DS_Store
+Thumbs.db

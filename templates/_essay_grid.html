@@ -1,0 +1,23 @@
+      <div class="essay-grid">
+        {% for item in teasers %}
+        <article class="essay-card{% if item.draft %} essay-card--placeholder{% endif %}">
+          <div class="essay-meta">
+            {% if item.draft %}
+            <time>待撰写</time>
+            {% else %}
+            <time datetime="{{ item.date }}">{{ item.date_dotted }}</time>
+            {% endif %}
+            <span class="essay-tag">{{ item.category_label }}</span>
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>
+            {{ item.teaser }}
+          </p>
+          {% if item.draft %}
+          <span class="read-more muted">敬请期待</span>
+          {% else %}
+          <a href="journal/{{ item.filename }}" class="read-more">阅读全文 →</a>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>

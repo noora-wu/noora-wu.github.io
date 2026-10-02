@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>STTR1 Star Trek · CSSE7023 Assignment 1</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #10140f; }
+  body {
+    display: flex; flex-direction: column;
+    font-family: Consolas, 'SFMono-Regular', 'Cascadia Mono', 'Liberation Mono', Menlo, monospace;
+    color: #7ee08a;
+  }
+  #screen {
+    flex: 1; margin: 0; padding: 10px 12px; overflow: auto;
+    font: inherit; font-size: 11.5px; line-height: 1.22;
+    white-space: pre; tab-size: 4;
+  }
+  #bar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 10px; border-top: 1px solid #263325; background: #141b13;
+  }
+  #bar span { color: #4fae5d; font-size: 13px; }
+  #cmd {
+    flex: 1; min-width: 0; padding: 6px 8px;
+    border: 1px solid #2f4a30; border-radius: 4px; outline: none;
+    background: #0b0f0b; color: #b8f5c0; font: inherit; font-size: 13px;
+  }
+  #cmd:focus { border-color: #5fbf6c; }
+  #cmd:disabled { opacity: .5; }
+  #send, #reset {
+    padding: 6px 12px; border: 1px solid #3e6a42; border-radius: 4px;
+    background: #1d2c1d; color: #b8f5c0; font: inherit; font-size: 12px; cursor: pointer;
+  }
+  #start {
+    position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; padding: 24px; text-align: center; background: rgba(16, 20, 15, .94);
+    font-family: 'Source Sans 3', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #cfe9d2;
+  }
+  #start h1 { margin: 0; font-family: Consolas, monospace; font-size: 18px; letter-spacing: .12em; color: #7ee08a; }
+  #start p { margin: 0; max-width: 30em; font-size: 13px; line-height: 1.7; color: #9fbfa3; }
+  #go {
+    padding: 9px 22px; border: 0; border-radius: 999px; background: #c45c3e; color: #fff;
+    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+  }
+  #go:disabled { opacity: .6; cursor: wait; }
+</style>
+</head>
+<body>
+<pre id="screen" aria-live="polite"></pre>
+<form id="bar" autocomplete="off">
+  <span aria-hidden="true">&gt;</span>
+  <input id="cmd" type="text" placeholder="输入指令后按回车（如 1）" aria-label="输入指令" disabled>
+  <button id="send" type="submit">发送</button>
+  <button id="reset" type="button" title="重新开始一局">重开</button>
+</form>
+<div id="start">
+  <h1>STTR1 · STAR TREK</h1>
+  <p>CSSE7023 Assignment 1 的 Java 程序，借助 CheerpJ 直接在浏览器里运行。<br>第一次启动要下载 Java 运行环境，约需十几秒到半分钟。</p>
+  <button id="go" type="button">开始游戏</button>
+</div>
+<script>
+(function () {
+  const screen = document.getElementById('screen');
+  const cmd = document.getElementById('cmd');
+  const bar = document.getElementById('bar');
+  const start = document.getElementById('start');
+  const go = document.getElementById('go');
+  document.getElementById('reset').addEventListener('click', function () { location.reload(); });
+  const MAX = 300000;
+  const queue = [];
+  let waiting = null;
+
+  function print(text) {
+    text = text.replace(/\x1b\[[0-9;]*[A-Za-z]/g, '');
+    let s = screen.textContent + text;
+    if (s.length > MAX) s = s.slice(s.length - MAX);
+    screen.textContent = s;
+    screen.scrollTop = screen.scrollHeight;
+  }
+
+  function submit(line) {
+    print(line + '\n');
+    if (waiting) { const w = waiting; waiting = null; w(line); }
+    else queue.push(line);
+  }
+
+  bar.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (cmd.disabled) return;
+    submit(cmd.value);
+    cmd.value = '';
+    cmd.focus();
+  });
+  screen.addEventListener('click', function () { if (!cmd.disabled) cmd.focus(); });
+
+  // Java native methods (sttrjweb.WebMain)
+  function Java_sttrjweb_WebMain_write(lib, text) { print(String(text)); }
+  function Java_sttrjweb_WebMain_readLine(lib) {
+    if (queue.length) return Promise.resolve(queue.shift());
+    return new Promise(function (resolve) { waiting = resolve; });
+  }
+
+  function loadScript(src) {
+    return new Promise(function (resolve, reject) {
+      const s = document.createElement('script');
+      s.src = src; s.onload = resolve; s.onerror = function () { reject(new Error('无法加载 ' + src)); };
+      document.head.appendChild(s);
+    });
+  }
+
+  go.addEventListener('click', async function () {
+    go.disabled = true;
+    go.textContent = '正在加载 Java 运行环境…';
+    try {
+      await loadScript('https://cjrtnc.leaningtech.com/4.3/loader.js');
+      await cheerpjInit({
+        version: 17,
+        status: 'none',
+        natives: { Java_sttrjweb_WebMain_write, Java_sttrjweb_WebMain_readLine }
+      });
+      start.remove();
+      print('[提示] 指令：0 移动 · 1 扫描当前象限 · 2 扫描附近象限 · 3 相位炮 · 4 鱼雷 · 5 护盾；其他任意输入显示指令列表。\n'
+            + '[提示] 程序已启动，输入 1 看看你所在的象限。克林贡（>!<）每回合都会开火，别发呆太久。\n\n');
+      cmd.disabled = false;
+      cmd.focus();
+      const jar = '/app' + new URL('sttrj-a1.jar', location.href).pathname;
+      const code = await cheerpjRunJar(jar);
+      print('\n[程序已结束（exit ' + code + '）。刷新页面可以再玩一局。]\n');
+      cmd.disabled = true;
+    } catch (err) {
+      go.disabled = false;
+      go.textContent = '加载失败，点此重试';
+      console.error(err);
+      const p = start.querySelector('p');
+      if (p) p.textContent = '加载失败：' + err.message + '（需要联网下载 CheerpJ）';
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DECO7220 数据可视化海报：The Gender Pay Gap in the United States（A2 横版，594 × 420 mm）。">
+  <title>The Gender Pay Gap in the United States · 海报 · Noora Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; background: #2a2723; color: #f0ece5; overflow: hidden; }
+    .pv-bar {
+      flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 0.7rem 1.25rem; background: #1f1d1a; border-bottom: 1px solid #3a3630;
+    }
+    .pv-back { color: #d9d2c5; text-decoration: none; font-size: 0.9rem; white-space: nowrap; }
+    .pv-back:hover { color: #fff; }
+    .pv-title { min-width: 0; text-align: center; }
+    .pv-title h1 { margin: 0; font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: #f0ece5; line-height: 1.3; }
+    .pv-title p { margin: 0.1rem 0 0; font-size: 0.78rem; color: #a89f90; letter-spacing: 0.03em; }
+    .pv-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
+    .pv-btn {
+      display: inline-flex; align-items: center; padding: 0.38rem 0.85rem; border: 1px solid #5a544b; border-radius: 999px;
+      background: transparent; color: #f0ece5; font: inherit; font-size: 0.82rem; text-decoration: none; cursor: pointer; white-space: nowrap;
+    }
+    .pv-btn:hover { border-color: var(--color-accent-light); color: #fff; }
+    .pv-stage {
+      flex: 1 1 auto; min-height: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 1.25rem;
+    }
+    .pv-stage img {
+      display: block; max-width: 100%; max-height: 100%; width: auto; height: auto;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35); background: #fff; cursor: zoom-in;
+    }
+    .pv-stage.is-zoomed { overflow: auto; display: block; padding: 0; }
+    .pv-stage.is-zoomed img { max-width: none; max-height: none; width: 4000px; cursor: zoom-out; box-shadow: none; }
+    .pv-hint { flex: 0 0 auto; margin: 0; padding: 0.45rem 1rem 0.6rem; text-align: center; font-size: 0.75rem; color: #7a7266; }
+    @media (max-width: 720px) {
+      .pv-bar { flex-wrap: wrap; padding: 0.6rem 0.9rem; }
+      .pv-title { order: 3; flex: 1 0 100%; text-align: left; }
+      .pv-stage { padding: 0.75rem; }
+      .pv-stage.is-zoomed img { width: 2800px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="pv-bar">
+    <a class="pv-back" href="../../journal/2026-09-10-deco7220-information-visualisation.html">← 返回文章</a>
+    <div class="pv-title">
+      <h1>The Gender Pay Gap in the United States</h1>
+      <p>A2 横版 · 594 × 420 mm · Illustrator · Acumin</p>
+    </div>
+    <div class="pv-actions">
+      <button class="pv-btn" id="pvToggle" type="button">放大查看</button>
+      <a class="pv-btn" href="gender-pay-gap-poster.pdf" target="_blank" rel="noopener">下载 PDF</a>
+    </div>
+  </header>
+  <main class="pv-stage" id="pvStage">
+    <img id="pvImg" src="poster-4000.jpg" width="4000" height="2828"
+         alt="数据可视化海报 The Gender Pay Gap in the United States：总体统计、1981–2013 年变化、美国地区地图，以及按职业排列的从业人数、薪酬差距与工资分布图表">
+  </main>
+  <p class="pv-hint" id="pvHint">点击海报放大到原始尺寸，放大后可拖动滚动条或滑动查看细节，再点一次回到全图。</p>
+  <script>
+    (function () {
+      var stage = document.getElementById('pvStage');
+      var img = document.getElementById('pvImg');
+      var btn = document.getElementById('pvToggle');
+      function setZoom(on, clientX, clientY) {
+        var rect = img.getBoundingClientRect();
+        var fx = clientX != null ? (clientX - rect.left) / rect.width : 0.5;
+        var fy = clientY != null ? (clientY - rect.top) / rect.height : 0.5;
+        stage.classList.toggle('is-zoomed', on);
+        btn.textContent = on ? '适应屏幕' : '放大查看';
+        if (on) {
+          stage.scrollLeft = Math.max(0, img.offsetWidth * fx - stage.clientWidth / 2);
+          stage.scrollTop = Math.max(0, img.offsetHeight * fy - stage.clientHeight / 2);
+        }
+      }
+      // 区分点击与拖动：放大后用鼠标拖动平移
+      var drag = null, moved = false;
+      img.addEventListener('click', function (e) {
+        if (moved) { moved = false; return; }
+        setZoom(!stage.classList.contains('is-zoomed'), e.clientX, e.clientY);
+      });
+      btn.addEventListener('click', function () { setZoom(!stage.classList.contains('is-zoomed')); });
+      stage.addEventListener('mousedown', function (e) {
+        if (!stage.classList.contains('is-zoomed') || e.button !== 0) return;
+        drag = { x: e.clientX, y: e.clientY, l: stage.scrollLeft, t: stage.scrollTop }; moved = false; e.preventDefault();
+      });
+      window.addEventListener('mousemove', function (e) {
+        if (!drag) return;
+        var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+        if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+        stage.scrollLeft = drag.l - dx; stage.scrollTop = drag.t - dy;
+      });
+      window.addEventListener('mouseup', function () { drag = null; });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setZoom(false); });
+    })();
+  </script>
+</body>
+</html>

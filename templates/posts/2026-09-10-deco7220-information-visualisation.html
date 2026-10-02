@@ -1,0 +1,96 @@
+{#meta
+{
+  "title": "DECO7220：用 Illustrator 讲数据故事",
+  "short_title": "DECO7220：信息可视化",
+  "date": "2026-09-10",
+  "category": "study",
+  "tags": ["DECO7220", "数据可视化", "Illustrator", "信息设计", "学业"],
+  "reading": 7,
+  "pinned": false,
+  "excerpt": "DECO7220 Information Visualisation：三轮图表重设计与互评、一张用 Illustrator 排版的 A2 数据海报，再把海报里的一张图做成可交互的探索页面。我的主题是美国的性别薪酬差距。",
+  "teaser": "一门把数据变成画面的课。我用 Illustrator 做了一张 A2 海报：The Gender Pay Gap in the United States。",
+  "description": "记录 DECO7220 Information Visualisation：用 Adobe Illustrator 做数据可视化——Redesign & Review 重设计练习、A2 数据可视化海报《The Gender Pay Gap in the United States》，以及交互式气泡图 Occupation Gender Pay Gap Explorer。",
+  "grade": {
+    "course": "DECO7220",
+    "term": "2026 S1",
+    "final": "6.0",
+    "scale": "/ 7.0",
+    "label": "Distinction",
+    "total": "总评 6.0",
+    "items": []
+  }
+}
+#}
+{% extends "_post.html" %}
+
+{% block lead %}
+        <p class="post-header__lead">
+          DECO7220 是一门用 Adobe Illustrator 做数据可视化的课：先学会看出一张图哪里出了问题，再亲手把一份数据讲成一张海报。
+        </p>
+{% endblock %}
+
+{% block post_body %}
+
+        <h2>一门把数据变成画面的课</h2>
+        <p>
+          DECO7220 Information Visualisation，2026 年第一学期。信息可视化把复杂的数据转化为清晰、有洞察的视觉表达，
+          结合平面设计原则、视觉传达理论与数据可视化技术，把原始的表格和数字变成能讲故事的画面；
+          在揭示规律、趋势与异常的同时，也要保证信息传达的清晰、准确与诚实。
+        </p>
+        <p>
+          主力工具是 Adobe Illustrator：海报必须在 Illustrator 里设计和排版，
+        </p>
+
+        <h2>我的作品：The Gender Pay Gap in the United States</h2>
+        <p>
+          海报的数据来自 Kaggle 上的 Gender Pay Gap Dataset（源自美国 Current Population Survey），
+          时间跨度是 1981 到 2013 年。美国全职、全年工作的女性，每当男性赚 1 美元，
+          她们赚 0.76 美元——平均时薪男性 24.69 美元、女性 18.76 美元，差距 24%。
+        </p>
+
+        <a class="poster-card" href="{{ base }}projects/deco7220-poster/index.html" target="_blank" rel="noopener">
+          <span class="poster-card__thumb">
+            <img src="{{ base }}images/deco7220/gender-pay-gap-poster-thumb.jpg"
+                 alt="海报缩略图：The Gender Pay Gap in the United States"
+                 loading="lazy" width="800" height="566">
+          </span>
+          <span class="poster-card__body">
+            <span class="poster-card__label">课程作品 · 数据可视化海报</span>
+            <span class="poster-card__title">The Gender Pay Gap in the United States</span>
+            <span class="poster-card__meta">A2 · 594 × 420 mm · Illustrator · Acumin</span>
+            <span class="poster-card__action">查看海报 →</span>
+          </span>
+        </a>
+
+        <p>
+          交互作业我选的正是那张气泡图，做成了一个网页版的
+          <strong>Occupation Gender Pay Gap Explorer</strong>。
+          海报篇幅有限，只能放下一部分职业；网页版可以一次铺开更多。
+        </p>
+
+        <p>
+          网页版已经部署在 GitHub Pages 上，可以直接在下面试玩：
+          拖动右上角的年份滑杆或点 Play years，把鼠标移到气泡上看详情，点一下锁定某个职业。
+          在窄屏里操作不便的话，可以<a href="https://noora-wu.github.io/occupation-paygap-explorer/" target="_blank" rel="noopener">在新窗口打开网站</a>，
+          源代码在 <a href="https://github.com/noora-wu/occupation-paygap-explorer" target="_blank" rel="noopener">GitHub 仓库</a>。
+        </p>
+
+        <!-- 交互作品：直接嵌入 GitHub Pages 上线版本 -->
+        <div class="mm-play viz-play">
+          <div class="mm-play__chrome">
+            <span class="mm-play__title">试玩 · Occupation Gender Pay Gap Explorer</span>
+            <div class="mm-play__actions">
+              <a class="mm-btn" href="https://noora-wu.github.io/occupation-paygap-explorer/" target="_blank" rel="noopener">新窗口打开</a>
+              <a class="mm-btn" href="https://github.com/noora-wu/occupation-paygap-explorer" target="_blank" rel="noopener">GitHub 仓库</a>
+            </div>
+          </div>
+          <iframe class="viz-play__frame" src="https://noora-wu.github.io/occupation-paygap-explorer/" title="Occupation Gender Pay Gap Explorer 交互气泡图" loading="lazy"></iframe>
+          <p class="mm-play__hint">年份滑杆 / Play years 切换年份 · 悬停看详情 · 点击锁定职业 · 拖动平移、滚轮缩放 · 「How to use」查看说明</p>
+        </div>
+
+        <h2>我带走了什么</h2>
+        <p>
+          这门课让我对数据可视化有了更深入的理解，学会了如何把数据讲清楚、讲诚实。
+        </p>
+
+{% endblock %}

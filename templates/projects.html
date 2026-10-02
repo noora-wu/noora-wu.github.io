@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- 页头横幅 -->
+  <section class="page-hero">
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__inner">
+      <div class="page-hero__rule" aria-hidden="true"></div>
+      <div class="page-hero__text">
+        <span class="page-hero__label">项目作品</span>
+        <h1>学习与创作</h1>
+        <p class="page-hero__desc">
+          课程项目与个人作品，以及一路积累的技能与工具。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+  <!-- 项目作品 -->
+  <section class="section" id="projects">
+    <div class="container">
+      {# 项目数据在 content/projects.json，新增项目只改那个文件 #}
+      <div class="project-filter" role="group" aria-label="按分类筛选项目">
+        <button type="button" class="project-tab is-active" data-cat="all" aria-pressed="true">全部<span class="project-tab__count">{{ project_data.total }}</span></button>
+        {% for cat in project_data.categories %}
+        <button type="button" class="project-tab" data-cat="{{ cat.key }}" aria-pressed="false">{{ cat.label }}<span class="project-tab__count">{{ cat.count }}</span></button>
+        {% endfor %}
+      </div>
+
+      <div class="project-stage" data-project-stage>
+        <div class="project-grid">
+          {% for p in project_data.projects %}
+          <article class="project-card" data-cat="{{ p.category }}">
+            <div class="project-thumb{% if not p.image %} project-thumb--placeholder project-thumb--{{ p.category }}{% endif %}">
+              {% if p.image %}
+              <img src="{{ p.image }}" alt="{{ p.title }} 封面" loading="lazy">
+              {% else %}
+              <span class="project-thumb__text" aria-hidden="true">{{ p.thumb_text }}</span>
+              {% endif %}
+              {% if p.status %}<span class="project-status">{{ p.status }}</span>{% endif %}
+            </div>
+            <div class="project-body">
+              <p class="project-meta">{{ p.category_label }}{% if p.year %} · {{ p.year }}{% endif %}</p>
+              <h3>{{ p.title }}</h3>
+              {% if p.summary %}<p class="project-summary">{{ p.summary }}</p>{% endif %}
+              {% if p.tags %}
+              <div class="project-tech">
+                {% for tag in p.tags %}<span>{{ tag }}</span>{% endfor %}
+              </div>
+              {% endif %}
+              {% if p.link or p.get("repo") or p.get("links") %}<div class="project-actions">
+              {% if p.link %}
+              <a href="{{ p.link }}" class="project-link" target="_blank" rel="noopener">{{ p.link_label }}<span aria-hidden="true">&rarr;</span></a>
+              {% endif %}
+{% if p.get("repo") %}<a href="{{ p.get("repo") }}" class="project-link" target="_blank" rel="noopener">GitHub 仓库<span aria-hidden="true">&rarr;</span></a>{% endif %}
+              {% for l in p.get("links", []) %}<a href="{{ l.url }}" class="project-link" target="_blank" rel="noopener">{{ l.label }}<span aria-hidden="true">&rarr;</span></a>{% endfor %}
+              </div>{% endif %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+
+        <div class="project-empty"{% if project_data.total %} hidden{% endif %}>
+          <span class="project-empty__mark" aria-hidden="true">✦</span>
+          <p class="project-empty__title">整理中，敬请期待</p>
+          <p class="project-empty__desc">这个分类的作品正在整理，很快就会放上来。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ base }}js/projects.js"></script>
+{% endblock %}

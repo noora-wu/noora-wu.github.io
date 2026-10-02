@@ -1,0 +1,81 @@
+{#meta
+{
+  "title": "CSSE7023：在 Java 里学面向对象",
+  "short_title": "CSSE7023：面向对象编程",
+  "date": "2026-09-10",
+  "category": "study",
+  "tags": ["CSSE7023", "Java", "OOP", "学业"],
+  "reading": 7,
+  "pinned": false,
+  "excerpt": "CSSE7023 Object Oriented Programming 是我学 Java 的那门课：类与对象、封装、继承、接口，再到泛型、异常处理、文件读写和 GUI。总评 6.0。",
+  "teaser": "继 Python 之后，我在 CSSE7023 学了 Java——一门把面向对象放在正中间的课。",
+  "description": "记录 CSSE7023 Object Oriented Programming：用 Java 学习面向对象——类与对象、封装、继承、接口，以及泛型、异常处理、文件读写与 GUI。",
+  "grade": {
+    "course": "CSSE7023",
+    "term": "2025 S2",
+    "final": "6.0",
+    "scale": "/ 7",
+    "label": "Distinction",
+    "total": "总评 6.0",
+    "items": []
+  }
+}
+#}
+{% extends "_post.html" %}
+
+{% block lead %}
+        <p class="post-header__lead">
+          如果说 CSSE7030 用 Python 带我入了门，这门课则换成了 Java，把面向对象放到了正中间。
+        </p>
+{% endblock %}
+
+{% block post_body %}
+
+        <h2>一门以面向对象为主线的课</h2>
+        <p>
+          CSSE7023 的先修课是 CSSE7030。主要教授的是 Java 的文件读写和图形界面（GUI）上。
+          类与对象、封装、继承、接口，这几块面向对象的基石，是这门课绕不开的内容。
+        </p>
+        <p>
+          和 Python 相比，Java 更「较真」：类型要写明，类和接口之间的关系要先想清楚，
+          很多问题在程序跑起来之前，就会被编译器拦下来。
+        </p>
+
+        <h2>作业与考试</h2>
+        <p>
+          <strong>Assignment 1</strong> 是把一款 1971 年的老游戏搬进 Java：
+          Mike Mayfield 用 BASIC 写的文字版 Star Trek（STTR1）。原版是给电传打字机跑的过程式程序，
+          作业要求按照 Javadoc 规格，用面向对象的方式把它的核心重新写出来——
+          8×8 个象限组成的银河、跃迁、能量、克林贡战舰——听起来像科幻，写起来是一整套封装、模块化与继承的练习。
+        </p>
+        <p>
+          下面是 Assignment 1 的可玩版本：运行的就是我当时提交的 Java 程序，借助 CheerpJ 在浏览器里跑起来。
+          点「开始游戏」后，第一次要下载 Java 运行环境，需要等十几秒到半分钟；进入游戏后，在窗口底部输入指令、按回车即可。
+        </p>
+
+        <!-- 可玩版：CheerpJ 在浏览器里运行 Assignment 1 编译后的 jar（文件在 projects/csse7023-a1/） -->
+        <div class="mm-play java-play">
+          <div class="mm-play__chrome">
+            <span class="mm-play__title">试玩 · STTR1 Star Trek（Java 原程序）</span>
+            <div class="mm-play__actions">
+              <a class="mm-btn" href="{{ base }}projects/csse7023-a1/index.html" target="_blank" rel="noopener">新窗口打开</a>
+            </div>
+          </div>
+          <iframe class="java-play__frame" src="{{ base }}projects/csse7023-a1/index.html" title="CSSE7023 Assignment 1 · STTR1 Star Trek 试玩" loading="lazy"></iframe>
+          <p class="mm-play__hint">指令：0 移动 · 1 扫描当前象限 · 2 扫描附近象限 · 3 相位炮 · 4 鱼雷 · 5 护盾；输入其他内容会显示指令列表。</p>
+        </div>
+
+        <p>
+          <strong>Assignment 2</strong> 主要用 Java Swing 把 Assignment 1 改成 GUI 版，并按 MVC（Model-View-Controller）架构拆开：
+        </p>
+
+        <h2>我带走了什么</h2>
+        <p>
+          Java 成了我继 Python 之后学会的第二门编程语言。
+        </p>
+        <p>
+          把 CSSE7030 和 CSSE7023 放在一起看，是一条很自然的路线：
+          先用 Python 学会把问题拆成步骤，再用 Java 学会把程序组织成彼此协作的对象。
+        </p>
+
+{% endblock %}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="记录 DECO7220 Information Visualisation：用 Adobe Illustrator 做数据可视化——Redesign & Review 重设计练习、A2 数据可视化海报《The Gender Pay Gap in the United States》，以及交互式气泡图 Occupation Gender Pay Gap Explorer。">
+  <title>DECO7220：用 Illustrator 讲数据故事 · 澳洲手札</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=1790932481">
+</head>
+<body>
+
+  <header class="site-header is-solid" id="top">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">Noora Journal</a>
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="../index.html#about">关于我</a>
+        <a href="../journey.html">成长旅程</a>
+        <a href="../projects.html">项目作品</a>
+        <a href="../journal.html" aria-current="page">澳洲手札</a>
+      </nav>
+    </div>
+  </header>
+  <article class="post-page">
+    <div class="post-container">
+
+      <a href="../journal.html" class="back-link">← 返回澳洲手札</a>
+
+      <header class="post-header">
+        <div class="post-header__meta">
+          <span class="post-header__cat">学业</span>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+          <span class="post-header__read">约 7 分钟</span>
+        </div>
+        <h1>DECO7220：用 Illustrator 讲数据故事</h1>
+        <p class="post-header__lead">
+          DECO7220 是一门用 Adobe Illustrator 做数据可视化的课：先学会看出一张图哪里出了问题，再亲手把一份数据讲成一张海报。
+        </p>
+        <div class="post-header__tags">
+          <span>DECO7220</span><span>数据可视化</span><span>Illustrator</span><span>信息设计</span><span>学业</span>
+        </div>
+      </header>
+
+      <aside class="grade-card" aria-label="课程成绩">
+        <div class="grade-card__main">
+          <div class="grade-card__score">
+            <span class="grade-card__final">6.0</span>
+            <span class="grade-card__scale">/ 7.0</span>
+          </div>
+          <div class="grade-card__summary">
+            <p class="grade-card__label">Distinction</p>
+            <p class="grade-card__course">
+DECO7220<span>· 2026 S1</span><span>· 总评 6.0</span>            </p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="post-body">
+
+        <h2>一门把数据变成画面的课</h2>
+        <p>
+          DECO7220 Information Visualisation，2026 年第一学期。信息可视化把复杂的数据转化为清晰、有洞察的视觉表达，
+          结合平面设计原则、视觉传达理论与数据可视化技术，把原始的表格和数字变成能讲故事的画面；
+          在揭示规律、趋势与异常的同时，也要保证信息传达的清晰、准确与诚实。
+        </p>
+        <p>
+          主力工具是 Adobe Illustrator：海报必须在 Illustrator 里设计和排版，
+        </p>
+
+        <h2>我的作品：The Gender Pay Gap in the United States</h2>
+        <p>
+          海报的数据来自 Kaggle 上的 Gender Pay Gap Dataset（源自美国 Current Population Survey），
+          时间跨度是 1981 到 2013 年。美国全职、全年工作的女性，每当男性赚 1 美元，
+          她们赚 0.76 美元——平均时薪男性 24.69 美元、女性 18.76 美元，差距 24%。
+        </p>
+
+        <a class="poster-card" href="../projects/deco7220-poster/index.html" target="_blank" rel="noopener">
+          <span class="poster-card__thumb">
+            <img src="../images/deco7220/gender-pay-gap-poster-thumb.jpg"
+                 alt="海报缩略图：The Gender Pay Gap in the United States"
+                 loading="lazy" width="800" height="566">
+          </span>
+          <span class="poster-card__body">
+            <span class="poster-card__label">课程作品 · 数据可视化海报</span>
+            <span class="poster-card__title">The Gender Pay Gap in the United States</span>
+            <span class="poster-card__meta">A2 · 594 × 420 mm · Illustrator · Acumin</span>
+            <span class="poster-card__action">查看海报 →</span>
+          </span>
+        </a>
+
+        <p>
+          交互作业我选的正是那张气泡图，做成了一个网页版的
+          <strong>Occupation Gender Pay Gap Explorer</strong>。
+          海报篇幅有限，只能放下一部分职业；网页版可以一次铺开更多。
+        </p>
+
+        <p>
+          网页版已经部署在 GitHub Pages 上，可以直接在下面试玩：
+          拖动右上角的年份滑杆或点 Play years，把鼠标移到气泡上看详情，点一下锁定某个职业。
+          在窄屏里操作不便的话，可以<a href="https://noora-wu.github.io/occupation-paygap-explorer/" target="_blank" rel="noopener">在新窗口打开网站</a>，
+          源代码在 <a href="https://github.com/noora-wu/occupation-paygap-explorer" target="_blank" rel="noopener">GitHub 仓库</a>。
+        </p>
+
+        <!-- 交互作品：直接嵌入 GitHub Pages 上线版本 -->
+        <div class="mm-play viz-play">
+          <div class="mm-play__chrome">
+            <span class="mm-play__title">试玩 · Occupation Gender Pay Gap Explorer</span>
+            <div class="mm-play__actions">
+              <a class="mm-btn" href="https://noora-wu.github.io/occupation-paygap-explorer/" target="_blank" rel="noopener">新窗口打开</a>
+              <a class="mm-btn" href="https://github.com/noora-wu/occupation-paygap-explorer" target="_blank" rel="noopener">GitHub 仓库</a>
+            </div>
+          </div>
+          <iframe class="viz-play__frame" src="https://noora-wu.github.io/occupation-paygap-explorer/" title="Occupation Gender Pay Gap Explorer 交互气泡图" loading="lazy"></iframe>
+          <p class="mm-play__hint">年份滑杆 / Play years 切换年份 · 悬停看详情 · 点击锁定职业 · 拖动平移、滚轮缩放 · 「How to use」查看说明</p>
+        </div>
+
+        <h2>我带走了什么</h2>
+        <p>
+          这门课让我对数据可视化有了更深入的理解，学会了如何把数据讲清楚、讲诚实。
+        </p>
+
+      </div>
+
+      <footer class="post-footer">
+        <div class="post-footer__sign">
+          <p>Noora · 写于布里斯班</p>
+          <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+        </div>
+        <nav class="post-nav" aria-label="文章导航">
+          <a href="2026-09-10-deco7140-introduction-to-web-design.html" class="post-nav__item post-nav__item--prev">
+            <span class="post-nav__label">上一篇</span>
+            <span class="post-nav__title">DECO7140：从零开始写网站</span>
+          </a>
+          <a href="2026-09-10-deco7250-human-computer-interaction.html" class="post-nav__item post-nav__item--next">
+            <span class="post-nav__label">下一篇</span>
+            <span class="post-nav__title">DECO7250：人机交互</span>
+          </a>
+        </nav>
+      </footer>
+
+    </div>
+  </article>
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-name">Noora Wu</a>
+          <p class="footer-tagline">I'm curious, I learn fast, and I like turning ideas into something real.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="页面">
+          <h2 class="footer-heading">页面</h2>
+          <ul class="footer-links">
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="../journey.html">成长旅程</a></li>
+            <li><a href="../projects.html">项目作品</a></li>
+            <li><a href="../journal.html" aria-current="page">澳洲手札</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">联系</h2>
+          <a href="mailto:noora_wu@outlook.com" class="footer-email">
+            <svg class="footer-email__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            <span>noora_wu@outlook.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Noora Wu<span class="footer-sep" aria-hidden="true">·</span><span class="footer-note">Built with care in Brisbane 🌅</span></p>
+        <a href="#top" class="footer-top-link">回到顶部 <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

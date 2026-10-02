@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <link title="timeline-styles" rel="stylesheet"
+    href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+{% endblock %}
+
+{% block content %}
+  <section class="journey-timeline-section" aria-label="成长旅程时间轴">
+    <div id="timeline-embed" class="journey-timeline-embed"></div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    (function () {
+      var data = {{ timeline_json }};
+      var el = document.getElementById("timeline-embed");
+      if (!el || typeof TL === "undefined") return;
+      // Open on the UQ slide unless the URL already points at another event
+      var startId = "uq";
+      function key(d) { return d ? (d.year || 0) * 10000 + (d.month || 1) * 100 + (d.day || 1) : 0; }
+      var sorted = (data.events || []).slice().sort(function (a, b) { return key(a.start_date) - key(b.start_date); });
+      var startIdx = 0;
+      for (var i = 0; i < sorted.length; i++) {
+        if (sorted[i].unique_id === startId) { startIdx = i + (data.title ? 1 : 0); break; }
+      }
+      var hasHash = !!window.location.hash;
+      window.journeyTimeline = new TL.Timeline(el, data, {
+        language: "zh-cn",
+        font: "nonserif-serif",
+        initial_zoom: 1,
+        hash_bookmark: true,
+        timenav_height_percentage: 25,
+        start_at_slide: hasHash ? 0 : startIdx
+      });
+      if (!hasHash) {
+        window.journeyTimeline.on("loaded", function () {
+          try { window.journeyTimeline.goToId(startId); } catch (e) {}
+        });
+      }
+      function fit() {
+        el.style.height = (window.innerHeight - el.getBoundingClientRect().top) + "px";
+        if (window.journeyTimeline && window.journeyTimeline.updateDisplay) {
+          window.journeyTimeline.updateDisplay();
+        }
+      }
+      fit();
+      window.addEventListener("resize", fit);
+    })();
+  </script>
+{% endblock %}
